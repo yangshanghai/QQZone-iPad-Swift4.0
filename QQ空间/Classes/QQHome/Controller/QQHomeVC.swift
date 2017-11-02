@@ -14,13 +14,17 @@ class QQHomeVC: UIViewController {
         let leftView = QQDock()
         leftView.delegate = self
         leftView.backgroundColor = UIColor.clear
-        self.view.addSubview(leftView)
+//        self.view.addSubview(leftView)
+        self.view.insertSubview(leftView, at: 0)
         return leftView
     }()
     
     lazy var rightView: UIView = {
         let rightView = UIView()
         rightView.backgroundColor = UIColor.brown
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(QQHomeVC.pan(gester:)))
+        rightView.addGestureRecognizer(pan)
+        
         self.view.addSubview(rightView)
         return rightView
     }()
@@ -126,7 +130,7 @@ extension QQHomeVC {
         
         addChildVC(vc: UIViewController(), title: "电子相框")
         addChildVC(vc: UIViewController(), title: "更多")
-        addChildVC(vc: UIViewController(), title: "全部动态")
+        addChildVC(vc: QQAll(), title: "全部动态")
         addChildVC(vc: UIViewController(), title: "好友")
         addChildVC(vc: UIViewController(), title: "与我相关")
         addChildVC(vc: UIViewController(), title: "照片墙")
@@ -154,5 +158,31 @@ extension QQHomeVC {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+}
+
+extension QQHomeVC {
+    
+    @objc func pan(gester: UIPanGestureRecognizer) {
+        if gester.state == .changed {
+            print("计算手指点的位置, 移动内容视图")
+            
+            let point = gester.translation(in: rightView)
+            print(point.x)
+            
+            var tempFrame = rightView.frame
+            tempFrame.origin.x = leftView.bottom.size.width + point.x * 0.4
+            rightView.frame = tempFrame
+        } else {
+            print("恢复内容视图的位置")
+            UIView.animate(withDuration: 0.1, animations: {
+                self.rightView.x = self.leftView.width
+            })
+        }
+    }
+    
+    
+    
+    
     
 }

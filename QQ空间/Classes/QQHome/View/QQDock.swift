@@ -14,7 +14,7 @@ protocol QQDockDelegate: QQMenueDelegate, QQTabbarDelegate {
 
 class QQDock: UIView {
     
-    var delegate: QQDockDelegate? {
+    weak var delegate: QQDockDelegate? {
         didSet{
             middle.delegate = delegate
             bottom.delegate = delegate

@@ -16,6 +16,7 @@
 		000E7E691FA9C82C00B651C3 /* QQMenueBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E7E681FA9C82C00B651C3 /* QQMenueBtn.swift */; };
 		000E7E6B1FA9CD4300B651C3 /* QQHeaderBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E7E6A1FA9CD4300B651C3 /* QQHeaderBtn.swift */; };
 		008436881FAAA7A5002C9816 /* QQShuoshuoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008436871FAAA7A5002C9816 /* QQShuoshuoVC.swift */; };
+		0084368C1FAAC1C6002C9816 /* QQAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084368B1FAAC1C6002C9816 /* QQAll.swift */; };
 		00B41DAA1FA9710000CA298D /* QQLoginTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B41DA91FA9710000CA298D /* QQLoginTool.swift */; };
 		00B41DAC1FA9784800CA298D /* QQMessageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B41DAB1FA9784800CA298D /* QQMessageTool.swift */; };
 		70A9A6E41CCEFDFF00CB713A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A9A6E21CCEFDFF00CB713A /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		000E7E681FA9C82C00B651C3 /* QQMenueBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQMenueBtn.swift; sourceTree = "<group>"; };
 		000E7E6A1FA9CD4300B651C3 /* QQHeaderBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQHeaderBtn.swift; sourceTree = "<group>"; };
 		008436871FAAA7A5002C9816 /* QQShuoshuoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQShuoshuoVC.swift; sourceTree = "<group>"; };
+		0084368B1FAAC1C6002C9816 /* QQAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQAll.swift; sourceTree = "<group>"; };
 		00B41DA91FA9710000CA298D /* QQLoginTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQLoginTool.swift; sourceTree = "<group>"; };
 		00B41DAB1FA9784800CA298D /* QQMessageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQMessageTool.swift; sourceTree = "<group>"; };
 		70A9A6DB1CCEFDFF00CB713A /* QQ空间.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QQ空间.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		008436891FAAC1C6002C9816 /* QQAll */ = {
+			isa = PBXGroup;
+			children = (
+				0084368A1FAAC1C6002C9816 /* Controller */,
+			);
+			path = QQAll;
+			sourceTree = "<group>";
+		};
+		0084368A1FAAC1C6002C9816 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0084368B1FAAC1C6002C9816 /* QQAll.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		70A9A6D21CCEFDFF00CB713A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +119,7 @@
 		70A9A6F01CCEFE8300CB713A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				008436891FAAC1C6002C9816 /* QQAll */,
 				008436851FAAA7A5002C9816 /* QQShuoshuo */,
 				70A9A6F11CCEFE8300CB713A /* Other */,
 				70A9A6F71CCEFE8300CB713A /* QQHome */,
@@ -306,6 +325,7 @@
 				000E7E5D1FA9A8A200B651C3 /* QQHomeVC.swift in Sources */,
 				00B41DAA1FA9710000CA298D /* QQLoginTool.swift in Sources */,
 				000E7E6B1FA9CD4300B651C3 /* QQHeaderBtn.swift in Sources */,
+				0084368C1FAAC1C6002C9816 /* QQAll.swift in Sources */,
 				70A9A7051CCF01BD00CB713A /* AppDelegate.swift in Sources */,
 				00B41DAC1FA9784800CA298D /* QQMessageTool.swift in Sources */,
 				000E7E691FA9C82C00B651C3 /* QQMenueBtn.swift in Sources */,

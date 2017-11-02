@@ -14,13 +14,13 @@ enum QQTabbarType: Int {
     case Camera
 }
 
-protocol QQTabbarDelegate {
+protocol QQTabbarDelegate: NSObjectProtocol {
     func dockTabbarDidSelect(type: QQTabbarType)
 }
 
 class QQTabbar: UIView {
 
-    var delegate: QQTabbarDelegate?
+    weak var delegate: QQTabbarDelegate?
     
     
     override init(frame: CGRect) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol QQMenueDelegate {
+protocol QQMenueDelegate: NSObjectProtocol {
     func dockMenueDidSelect(index: Int)
 }
 
@@ -17,7 +17,7 @@ class QQMenue: UIView {
     var lastBtn: UIButton?
     
     
-    var delegate: QQMenueDelegate?
+    weak var delegate: QQMenueDelegate?
     
 
     override init(frame: CGRect) {
